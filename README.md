@@ -26,18 +26,18 @@ Operating system:
 * The instructions for software installation described here and in the protocol paper are for a Windows PC (qdSpectro has been tested on Windows 10). Whilst the package should be portable to Linux or Mac operating systems, it has not been tested in these platforms and may require some user modification.
 		
 Packages:
-* Python 3 version 3.6.3 or later (tested with version 3.6.3) and of a bitness which matches the computer’s bitness (i.e., install 64-bit Python if running it on a 64-bit computer).https://www.python.org/
+* Python 3 version 3.6.3 or later (tested with version 3.6.3) and of a bitness which matches the computer’s bitness (i.e., install 64-bit Python if running it on a 64-bit computer). https://www.python.org/
 * Notepad++ or any other text editor of your choice for viewing and editing Python scripts. https://notepad-plus-plus.org/
 		
 Drivers:
 * National Instruments NI-DAQmx driver (tested with version 17.1.1 with NI DAQ card NI USB-6229) - the user should download an NI-DAQmx driver which is compatible with their chosen DAQ card. https://www.ni.com/dataacquisition/nidaqmx.htm
-* SpinAPI: SpinCore API and Driver Suite for the PulseBlaster card (tested with version 20171214).http://www.spincore.com/support/spinapi/SpinAPI_Main.shtml
+* SpinAPI: SpinCore API and Driver Suite for the PulseBlaster card (tested with version 20171214). http://www.spincore.com/support/spinapi/SpinAPI_Main.shtml
 * National Instrument drivers for the USB/GPIB converter (listed under hardware requirements above) used for GPIB communication between the PC and the SRS signal generator. qdSpectro has been tested with the National Instruments GPIB-USB-HS converter, which requires the NI-VISA and NI-488.2 drivers to be installed (qdSpectro has been tested with version 16.0 of both, although later versions are also expected to work).
 		
 Libraries for peripheral instrument control:
 * SpinAPI Python3 wrapper – SpinCore’s Python wrapper for C functions in SpinAPI, which can be used to communicate with and control the PulseBlaster Card. qdSpectro has been tested with the version of spinapi.py made available by Spincore on the link below (as of Feb 8th, 2018). 
 http://www.spincore.com/support/SpinAPI_Python_Wrapper/Python_Wrapper_Main.shtml
-If the link above is no longer active, the required version of spinapi.py can still be retrieved here:		https://web.archive.org/web/20190208140542/http://www.spincore.com/support/SpinAPI_Python_Wrapper/spinapi.py
+If the aforementioned link is no longer active, the required version of spinapi.py can still be retrieved here:	https://web.archive.org/web/20190208140542/http://www.spincore.com/support/SpinAPI_Python_Wrapper/spinapi.py
 * NI-VISA library (tested with version 16.0) – this library should be installed with the drivers for the  NI GPIB/USB converter but, if not, it can be downloaded from the National Instruments website: http://www.ni.com/download/ni-visa-16.0/6184/en/ (link for version 16.0). This library must be installed to enable qdSpectro to communicate with the SRS signal generator via GPIB. ***Important: The bitness of this library must match the Python bitness.***
 * PyVISA version 1.8 or later (tested with version 1.8) - a python wrapper for the NI-VISA library, which allows the library to be called from Python scripts https://pypi.python.org/pypi/PyVISA
 		
