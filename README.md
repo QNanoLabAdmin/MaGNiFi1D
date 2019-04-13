@@ -93,11 +93,11 @@ Main control and auxiliary libraries:
 Before running any experiments with qdSpectro, the user should read the readme file provided with the version of package they have downloaded, where any upgrades and patches will be described, and edit connectionConfig.py, as directed in the protocol paper.
 	
 To run an experiment with qdSpectro:
-i.	Open the relevant ___config.py file in notepad++. Read the description of the experimental parameters and data-processing options defined in this script.
-ii.	Edit the experimental parameters and configure the data-processing options in the “User Inputs” section of this script, as required. 
-iii. To run the experiment, open a windows command prompt and, from the working directory, run:
+1. Open the relevant ___config.py file in notepad++. Read the description of the experimental parameters and data-processing options defined in this script.
+2.	Edit the experimental parameters and configure the data-processing options in the “User Inputs” section of this script, as required. 
+3. To run the experiment, open a windows command prompt and, from the working directory, run:
 ```python mainControl.py __config```
-iv.	To quit an experiment before it finishes running, press Ctrl+C.
+4.	To quit an experiment before it finishes running, press Ctrl+C.
 
 A note on units: units for user-input parameters (entered in step ii above) are specified in the comments accompanying the user-input section of the ___config.py files. For added clarity, we also note here that the default unit for time variables in version 1.0 of the qdSpectro package (the current version at the time of writing) is nanoseconds. The user may either enter time variables in nanoseconds or use one of the following unit multipliers: ns = 1, us = 1e3, ms = 1e6. For example, if setting the variable endTau to 10 microseconds, the user may either enter endTau = 10000 or endTau = 10*us in the user-input section of the relevant ___config.py file. The latter format is used throughout the instructions given in this paper. For completeness, we also note that, in version 1.0 of qdSpectro, microwave frequencies are entered in hertz (e.g. if setting the variable startFreq to 2.7GHz, the user should enter startFreq=2.7e9) and microwave powers in dBm (e.g. if setting the variable microwavePower to 0 dBm, the user should enter microwavePower=0). Users running a different version of qdSpectro should refer to that version's readme file for any version-specific user-input instructions.
 	
