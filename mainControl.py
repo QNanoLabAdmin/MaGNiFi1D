@@ -345,7 +345,7 @@ def runExperiment(expConfigFile):
 						data[:,2] = meanBackgroundCurrentRun[0:i_scanPoint+1]
 						dataFile = open(expCfg.dataFileName, 'w')
 						for line in data:
-							dataFile.write("%.0f\t%f\t%f\n" % tuple(line))
+							dataFile.write("%.0f\t%.8f\t%.8f\n" % tuple(line))
 						paramFile = open(expCfg.paramFileName, 'w')
 						expParamList[1] = i_scanPoint+1
 						paramFile.write(expCfg.formattingSaveString % tuple(expParamList))
@@ -384,7 +384,7 @@ def runExperiment(expConfigFile):
 				data[:,2] = updatedBackground
 				dataFile = open(expCfg.dataFileName, 'w')
 				for item in data:
-					dataFile.write("%.0f\t%f\t%f\n" % tuple(item))
+					dataFile.write("%.0f\t%.8f\t%.8f\n" % tuple(item))
 				paramFile = open(expCfg.paramFileName, 'w')
 				expParamList[3] = i_run+1
 				paramFile.write(expCfg.formattingSaveString % tuple(expParamList))
