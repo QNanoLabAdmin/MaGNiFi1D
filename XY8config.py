@@ -95,7 +95,7 @@ endTau = 480
 # Number of delay steps:
 N_scanPts = 45
 # Microwave power output from SRS(dBm) - DO NOT EXCEED YOUR AMPLIFIER'S MAXIMUM INPUT POWER:
-microwavePower = 5
+microwavePower = -5
 # Microwave frequency (Hz):
 microwaveFrequency = 2e9 
 # Pulse sequence parameters:----------------------------------------------------
@@ -110,7 +110,7 @@ N =12
 # Number of fluorescence measurement samples to take at each delay point:
 Nsamples = 10000
 # Number of averaging runs to do:
-Navg = 1
+Navg = 5
 #DAQ timeout, in seconds:
 DAQtimeout = 10
 # Plotting options--------------------------------------------------------------

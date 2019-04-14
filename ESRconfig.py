@@ -83,13 +83,13 @@ t_min = 1e3/PBclk #in ns
 
 # Microwave scan parameters:----------------------------------------------------
 # Start frequency (in Hz):
-startFreq = 1.99e9
+startFreq = 2.7e9
 # End frequency (in Hz):
-endFreq = 2.01e9
+endFreq = 3.0e9
 # Number of frequency steps:
-N_scanPts = 100
+N_scanPts = 101
 # Microwave power output from SRS(dBm) - DO NOT EXCEED YOUR AMPLIFIER'S MAXIMUM INPUT POWER:
-microwavePower = -30 
+microwavePower = -5 
 # Pulse sequence parameters:----------------------------------------------------
 # Duration of the signal-aquisition half of one iteration of ESR pulse sequence:
 t_duration = 80*us

@@ -91,11 +91,11 @@ t_min = 1e3/PBclk #in ns
 # Start delay duration (in nanoseconds):
 startTau =100
 # End delay duration (in nanoseconds):
-endTau = 20000
+endTau = 10000
 # Number of delay steps:
 N_scanPts = 200
 # Microwave power output from SRS(dBm) - DO NOT EXCEED YOUR AMPLIFIER'S MAXIMUM INPUT POWER:
-microwavePower = 5
+microwavePower = -5
 # Microwave frequency (Hz):
 microwaveFrequency = 2e9 
 # Pulse sequence parameters:----------------------------------------------------

@@ -89,13 +89,13 @@ t_min = 1e3/PBclk #in ns
 #(t_readoutDelay + t_min*round(1*us/t_min)) to avoid pulse overlap errors:
 start_t = 4.5e3
 # End pulse duration (in nanoseconds):
-end_t = 10e6
+end_t = 5e6
 # Number of delay steps:
 N_scanPts = 200
 # Microwave power output from SRS(dBm) - DO NOT EXCEED YOUR AMPLIFIER'S MAXIMUM INPUT POWER:
-microwavePower = 8
+microwavePower = -5
 # Microwave frequency (Hz):
-microwaveFrequency = 2e9 
+microwaveFrequency = 2e9
 # Pulse sequence parameters:----------------------------------------------------
 # AOM pulse duration (in ns)
 t_AOM= 5*us
