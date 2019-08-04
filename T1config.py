@@ -50,7 +50,7 @@ To run this script:
  
  User inputs:
   -->Note: t_min is defined as the time resolution of your PulseBlaster card (i.e.t_min = 1/(clock frequency)). E.g. for a 500MHz card, t_min = 2ns. 
- *start_t: shortest delay in scan, in nanoseconds.  Note: if start_t<(t_readoutDelay + t_min*round(1*us/t_min)), it will be shifted by (t_readoutDelay + t_min*round(1*us/t_min)) to avoid pulse overlap errors.
+ *start_t: shortest delay in scan, in nanoseconds.  Note: if start_t<(t_readoutDelay + 2*t_min*round((1*us)/t_min) + t_pi), it will be shifted by (t_readoutDelay + 2*t_min*round((1*us)/t_min) + t_pi) to avoid pulse overlap errors.
  *end_t:  longest delay in scan, in nanoseconds. 
  *N_scanPts: number of points in the scan. 
  *microwavePower: output power of the SRS signal generator, in dBm. CAUTION: this should not exceed the input power of any amplifiers connected to the SRS output.
@@ -85,8 +85,8 @@ t_min = 1e3/PBclk #in ns
 #-------------------------  USER INPUT  ---------------------------------------#
 # Microwave scan parameters:----------------------------------------------------
 # Start pulse duration (in nanoseconds). Note: if 
-# start_t<(t_readoutDelay + t_min*round(1*us/t_min)), it will be shifted by
-#(t_readoutDelay + t_min*round(1*us/t_min)) to avoid pulse overlap errors:
+# start_t<(t_readoutDelay + 2*t_min*round((1*us)/t_min) + t_pi), it will be shifted by
+#(t_readoutDelay + 2*t_min*round((1*us)/t_min) + t_pi) to avoid pulse overlap errors:
 start_t = 4.5e3
 # End pulse duration (in nanoseconds):
 end_t = 5e6
@@ -136,7 +136,7 @@ shotByShotNormalization = False
 randomize = True
 #------------------------- END OF USER INPUT ----------------------------------#
 scannedParam = np.linspace(start_t,end_t, N_scanPts, endpoint=True)
-#If start_t<t_readoutDelay+1*us, shift scanned time points by t_readoutDelay+1*us to avoid pulse overlap errors and warn user:
+#If start_t<(t_readoutDelay + 2*t_min*round((1*us)/t_min) + t_pi), shift scanned time points by (t_readoutDelay + 2*t_min*round((1*us)/t_min) + t_pi) to avoid pulse overlap errors and warn user:
 if start_t< (t_readoutDelay + 2*t_min*round((1*us)/t_min) + t_pi):
 	scannedParam = [x + (t_readoutDelay + 2*t_min*round((1*us)/t_min) + t_pi) for x in scannedParam]
 	print('Note: start_t (and all subsequent scan points) have been shifted by ', (t_readoutDelay + 2*t_min*round((1*us)/t_min) + t_pi),'ns to avoid pulse overlap errors. First scan point is hence', scannedParam[0],'ns.')
