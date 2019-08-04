@@ -1,4 +1,4 @@
-# README  qdSpectro v1.0 
+# README  qdSpectro v1.0.1 
 Copyright 2018 Diana Prado Lopes Aude Craik (MIT License)
 
 This software package is intended to be used alongside the protocol described in the paper entitled "Quantum diamond spectrometer for nanoscale NMR and ESR spectroscopy" (currently under review for publication in Nature Protocols, 2019). The paper presents a protocol for building a spectrometer based on nitrogen vacancy (NV) centers in diamond and describes the installation and running procedure for this software package and associated hardware. This readme file gives a summary of the system requirements and installation/running guidelines for qdSpectro, but the user should also read the full protocol instructions on the paper (henceforth referred to as the protocol paper).
@@ -112,4 +112,4 @@ At several points throughout the setup of the apparatus for the NV diamond spect
 To turn on a given PB channel, type in the letter corresponding to it and press Enter. To turn the channel off, type in the same key again. Check the functionality by measuring the PB output voltage on an oscilloscope.
 
 ## 4. Current version patches and updates
-This is the first release - no patches/updates so far.
+v1.0.1: Minor documentation fixes in user-input section of T1config.py.
